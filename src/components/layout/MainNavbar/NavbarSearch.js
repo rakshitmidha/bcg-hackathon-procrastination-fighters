@@ -13,6 +13,7 @@ export default () => (
       <InputGroupAddon type="prepend">
         <InputGroupText>
           <i className="material-icons">search</i>
+          {/*<h4>It is {new Date().toLocaleTimeString()}.</h4>*/}
         </InputGroupText>
       </InputGroupAddon>
       <FormInput

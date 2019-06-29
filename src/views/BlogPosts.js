@@ -17,25 +17,27 @@ class BlogPosts extends React.Component {
     super(props);
 
     this.state = {
-      // First list of posts.
-      PostsListOne: [
-        {
-          backgroundImage: require("../images/content-management/smiling_face.png")
-        }
-      ]
+      // Emoji Url present in t content-management folder
+      emojiBackgroundImage: require("../images/content-management/sad_face.png")
     };
   }
 
-  render() {
-    const {PostsListOne} = this.state;
+  //Straight Face Image path  - "../images/content-management/straight_face.png"
+  //Sad Face Image path  - "../images/content-management/sad_face.png"
 
+  changeEmoji(nameOfTheImage) {
+    this.setState({
+      emojiBackgroundImage: require("../images/content-management/" + nameOfTheImage + "png")
+    });
+  }
+
+  render() {
     return (
       <Container fluid>
-        {/* First Row of Posts */}
         <Row>
-          {PostsListOne.map((post) => (
+          {
             <Card>
-              <img src={post.backgroundImage} style={{
+              <img src={this.state.emojiBackgroundImage} style={{
                 display: "block",
                 marginLeft: "auto",
                 marginRight: "auto",
@@ -43,7 +45,7 @@ class BlogPosts extends React.Component {
                 padding: "135.2px 0px"
               }}/>
             </Card>
-          ))}
+          }
         </Row>
       </Container>
     );
