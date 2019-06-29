@@ -2,12 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Container, Row, Col } from "shards-react";
 
+// import { score }  from './aws-integration';
+
 import PageTitle from "./../components/common/PageTitle";
 import SmallStats from "./../components/common/SmallStats";
 import UsersOverview from "./../components/blog/UsersOverview";
 import UsersByDevice from "./../components/blog/UsersByDevice";
 import NewDraft from "./../components/blog/NewDraft";
 import BlogPosts from "./BlogPosts";
+
 
 const BlogOverview = ({ smallStats }) => (
   <Container fluid className="main-content-container px-4">
@@ -18,8 +21,10 @@ const BlogOverview = ({ smallStats }) => (
 
     <Row>
       {/* Users Overview */}
+
       <Col lg="4" md="6" sm="12" className="mb-4">
-        <BlogPosts/>
+        {/*{score} {last_heartrate}*/}
+        <BlogPosts emojiBackgroundImage = "./images/content-management/smiley_face.png"/>
       </Col>
       <Col lg="8" md="6" sm="4" className="col-lg mb-4">
         <UsersOverview />

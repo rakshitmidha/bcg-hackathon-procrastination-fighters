@@ -18,18 +18,12 @@ class BlogPosts extends React.Component {
 
     this.state = {
       // Emoji Url present in t content-management folder
-      emojiBackgroundImage: require("../images/content-management/sad_face.png")
+      emojiBackgroundImage: require("../images/content-management/smiling_face.png")
     };
   }
 
   //Straight Face Image path  - "../images/content-management/straight_face.png"
   //Sad Face Image path  - "../images/content-management/sad_face.png"
-
-  changeEmoji(nameOfTheImage) {
-    this.setState({
-      emojiBackgroundImage: require("../images/content-management/" + nameOfTheImage + "png")
-    });
-  }
 
   render() {
     return (
