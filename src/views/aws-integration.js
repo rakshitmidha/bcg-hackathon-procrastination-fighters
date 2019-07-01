@@ -3,6 +3,10 @@
 //
 // AWS.config.loadFromPath('./aws_config.json');
 //
+// AWS.config.update({
+//   region: awsmobile.aws_cognito_region
+// });
+//
 // // Create DynamoDB service object
 // var ddb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
 //
@@ -33,4 +37,4 @@
 //   }
 // });
 //
-// export default score;
+// export {score};
